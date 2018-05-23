@@ -1,0 +1,15 @@
+<input type="text" name="" id="" (keyup)='onKeyup($event)'>
+<button (click)='getUsers()'>Search</button>
+<p>{{searchCount}}</p>
+
+<ol *ngIf='searchResult'>
+  <li *ngFor = 'let user of searchResult.items'>
+    <div>
+    <p>User Login : {{user.login}}</p>
+    <p><img src="{{user.avatar_url}}" /></p>
+    <p>User Id : {{user.id}}</p>
+  </div>
+  </li>
+</ol>
+
+
